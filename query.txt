@@ -1,3 +1,5 @@
+SELECT
+
 1- Selezionare tutte le software house americane (3)
 
 SELECT *
@@ -54,6 +56,13 @@ WHERE YEAR(v.release_date) = 2020;
 
 10- Selezionare gli id dei videogame che hanno ricevuto almeno una recensione da stelle, mostrandoli una sola volta (443)ù
 
-SELECT r.videogame_id 
+SELECT DISTINCT r.videogame_id 
 FROM reviews r 
-WHERE r.rating = 1;
+WHERE r.rating = 5;
+
+11- Selezionare il numero e la media delle recensioni per il videogioco con ID = 412 (review number = 12, avg_rating = 3.16 circa)
+
+SELECT COUNT(*) as 'review number', AVG(r.rating) 
+FROM reviews r 
+WHERE r.videogame_id = 412;
+

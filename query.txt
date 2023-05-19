@@ -149,6 +149,13 @@ WHERE YEAR(V.release_date) > 2020;
 
 5- Selezionare i premi ricevuti da ogni software house per i videogiochi che ha prodotto (55)
 
+SELECT v.id 
+FROM software_houses sh 
+	JOIN videogames v 
+	ON sh.id = v.software_house_id 
+	JOIN award_videogame av
+	ON v.id = av.videogame_id 
+
 6- Selezionare categorie e classificazioni PEGI dei videogiochi che hanno ricevuto recensioni da 4 e 5 stelle, mostrandole una sola volta (3363)
 
 7- Selezionare quali giochi erano presenti nei tornei nei quali hanno partecipato i giocatori il cui nome inizia per 'S' (474)

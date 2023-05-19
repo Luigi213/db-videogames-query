@@ -15,3 +15,15 @@ WHERE p.city LIKE 'Rogahnland';
 SELECT *
 FROM players p 
 WHERE p.name LIKE '%a';
+
+4- Selezionare tutte le recensioni scritte dal giocatore con ID = 800 (11)
+
+SELECT *
+FROM reviews r 
+WHERE r.player_id = 800;
+
+5- Contare quanti tornei ci sono stati nell'anno 2015 (9)
+
+SELECT COUNT(*) 
+FROM tournaments t 
+WHERE t.`year` = 2015;

@@ -141,6 +141,12 @@ FROM videogames v
 
 4- Selezionare i dati di tutte le software house che hanno rilasciato almeno un gioco dopo il 2020, mostrandoli una sola volta (6)
 
+SELECT DISTINCT sh.*
+FROM software_houses sh 
+	JOIN videogames v 
+	ON sh.id = v.software_house_id
+WHERE YEAR(V.release_date) > 2020;
+
 5- Selezionare i premi ricevuti da ogni software house per i videogiochi che ha prodotto (55)
 
 6- Selezionare categorie e classificazioni PEGI dei videogiochi che hanno ricevuto recensioni da 4 e 5 stelle, mostrandole una sola volta (3363)

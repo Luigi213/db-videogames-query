@@ -188,6 +188,18 @@ WHERE p.name LIKE 's%';
 
 8- Selezionare le città in cui è stato giocato il gioco dell'anno del 2018 (36)
 
+SELECT DISTINCT t.city
+FROM awards a 
+	JOIN award_videogame av 
+	ON a.id = av.award_id 
+	JOIN videogames v 
+	ON av.videogame_id = v.id 
+	JOIN tournament_videogame tv 
+	ON v.id = tv.videogame_id 
+	JOIN tournaments t 
+	ON tv.tournament_id = t.id 
+WHERE av.`year` = 2018;
+
 9- Selezionare i giocatori che hanno giocato al gioco più atteso del 2018 in un torneo del 2019 (3306)
 
 

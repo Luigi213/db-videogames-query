@@ -9,3 +9,9 @@ WHERE sh.country LIKE 'united states';
 SELECT *
 FROM players p 
 WHERE p.city LIKE 'Rogahnland';
+
+3- Selezionare tutti i giocatori il cui nome finisce per "a" (220)
+
+SELECT *
+FROM players p 
+WHERE p.name LIKE '%a';

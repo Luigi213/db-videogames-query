@@ -39,3 +39,10 @@ WHERE a.description LIKE '%facere%'
 SELECT *
 FROM category_videogame cv 
 WHERE cv.category_id = 2 OR cv.category_id = 6;
+
+8- Selezionare tutte le recensioni con voto compreso tra 2 e 4 (2947)
+
+SELECT *
+FROM reviews r 
+WHERE r.rating BETWEEN 2 AND 4;
+

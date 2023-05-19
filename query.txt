@@ -2,4 +2,10 @@
 
 SELECT *
 FROM software_houses sh
-WHERE sh.country LIKE 'united states'
+WHERE sh.country LIKE 'united states';
+
+2- Selezionare tutti i giocatori della città di 'Rogahnland' (2)
+
+SELECT *
+FROM players p 
+WHERE p.city LIKE 'Rogahnland';

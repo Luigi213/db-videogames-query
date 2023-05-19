@@ -122,6 +122,14 @@ FROM reviews r
 
 2- Sezionare tutti i videogame dei tornei tenuti nel 2016, mostrandoli una sola volta (226)
 
+SELECT DISTINCT v.*
+FROM videogames v 
+	JOIN tournament_videogame tv 
+	ON v.id = tv.videogame_id 
+	JOIN tournaments t 
+	ON tv.tournament_id = t.id 
+WHERE t.`year` = 2016;
+
 3- Mostrare le categorie di ogni videogioco (1718)
 
 4- Selezionare i dati di tutte le software house che hanno rilasciato almeno un gioco dopo il 2020, mostrandoli una sola volta (6)

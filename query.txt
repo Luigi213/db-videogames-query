@@ -198,10 +198,25 @@ FROM awards a
 	ON v.id = tv.videogame_id 
 	JOIN tournaments t 
 	ON tv.tournament_id = t.id 
-WHERE av.`year` = 2018;
+WHERE av.`year` = 2018 AND av.award_id = 1;
 
 9- Selezionare i giocatori che hanno giocato al gioco più atteso del 2018 in un torneo del 2019 (3306)
 
+SELECT  p.*
+FROM awards a 
+	JOIN award_videogame av 
+	ON a.id = av.award_id 
+	JOIN videogames v 
+	ON av.videogame_id = v.id 
+	JOIN tournament_videogame tv 
+	ON v.id = tv.videogame_id 
+	JOIN tournaments t 
+	ON tv.tournament_id = t.id 
+	JOIN player_tournament pt 
+	ON t.id = pt.tournament_id 
+	JOIN players p 
+	ON pt.player_id = p.id 
+WHERE av.`year` = 2018 AND t.`year` = 2019 AND av.award_id = 5;
 
 #### Bonus
 10- Selezionare i dati della prima software house che ha rilasciato un gioco, assieme ai dati del gioco stesso (software house id : 5)
